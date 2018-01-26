@@ -30,15 +30,8 @@ public class MainActivity extends AppCompatActivity {
                 if (((RadioButton)findViewById(R.id.q1_false)).isChecked()) {score++;} // checks to see if correct radio button is selected
                 if (((RadioButton)findViewById(R.id.q2_true)).isChecked()) {score++;} // same as above
                 if (question3.getText().toString().equals("Japan")){score++;} // checks if text in EditText is an exact match
-
-                if ((((CheckBox) findViewById(R.id.q4_anago)).isChecked()) && (((CheckBox) findViewById(R.id.q4_maguro)).isChecked()) && (((CheckBox) findViewById(R.id.q4_uni)).isChecked()))
-                    score++; // checks if all three checkboxes were selected
-                if (((CheckBox) findViewById(R.id.q4_nara)).isChecked()) {score--;} // deduct point if incorrect checkbox selected
-
-                if (score < 0) {
-                    score = 0;
-                } // if score falls below 0, set to 0 (workaround for checkbox question; if only incorrect box is selected, score dips to -1)
-
+                if ((((CheckBox) findViewById(R.id.q4_anago)).isChecked()) && (((CheckBox) findViewById(R.id.q4_maguro)).isChecked()) && !(((CheckBox) findViewById(R.id.q4_nara)).isChecked()) && (((CheckBox) findViewById(R.id.q4_uni)).isChecked()))
+                    score++; // checks if correct checkboxes were selected, note the exclamation mark before third checkbox
                 displayResult(score);
             }
 
