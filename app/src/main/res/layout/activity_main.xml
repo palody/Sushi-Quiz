@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.sushiquiz.MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <RadioGroup
+                android:id="@+id/q1_question"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="1. Sushi was originally prepared for royalty. (1 point)"
+                    android:textSize="8pt" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="True" />
+
+                <RadioButton
+                    android:id="@+id/q1_false"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="False" />
+            </RadioGroup>
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="2. Not all sushi are raw. (1 point)"
+                    android:textSize="8pt" />
+
+                <RadioButton
+                    android:id="@+id/q2_true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="True" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="False" />
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="3. The creator of the California Roll was born in this country. (1 point)"
+                android:textSize="8pt" />
+
+            <EditText
+                android:id="@+id/q3_text_field"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:inputType="textCapWords"
+                android:maxLines="1" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="4. Select the names of actual sushi. (1 point)"
+                android:textSize="8pt" />
+
+            <CheckBox
+                android:id="@+id/q4_maguro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Maguro" />
+
+            <CheckBox
+                android:id="@+id/q4_anago"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Anago" />
+
+            <CheckBox
+                android:id="@+id/q4_nara"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nara" />
+
+            <CheckBox
+                android:id="@+id/q4_uni"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Uni" />
+
+
+            <Button
+                android:id="@+id/check_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Check Answers" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</android.support.constraint.ConstraintLayout>
